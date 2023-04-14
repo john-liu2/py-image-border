@@ -4,6 +4,7 @@ __pycache__/
 .DS_Store
 
 .venv/
+dist/
 
 tests/source_images/bear_scratching_bordered.jpg/
 willie_hiking.jpg

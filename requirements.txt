@@ -1,5 +1,7 @@
+build==0.10.0
 iniconfig==2.0.0
 packaging==23.1
 Pillow==9.5.0
 pluggy==1.0.0
+pyproject_hooks==1.0.0
 pytest==7.3.0

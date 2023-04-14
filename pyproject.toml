@@ -1,0 +1,28 @@
+[build-system]
+requires = ["flit_core>=3.4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "py-image-border"
+version = "2023.04.14"
+authors = [
+    { name="Eric Matthes" },
+]
+description = "Add a border to any image."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "Pillow",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ehmatthes/py-image-border"
+"Issues" = "https://github.com/ehmatthes/py-image-border/issues"
+
+[project.scripts]
+add-border = "py_image_border.add_border:main"

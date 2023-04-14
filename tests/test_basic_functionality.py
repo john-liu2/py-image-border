@@ -13,7 +13,7 @@ def test_default_border():
     path_modified = Path("tests/source_images/bear_scratching_bordered.jpg")
     path_reference = Path("tests/reference_images/bear_scratching_default.jpg")
 
-    cmd = f"python add_border.py {path_source}"
+    cmd = f"python py_image_border/add_border.py {path_source}"
     cmd_parts = cmd.split()
 
     output = subprocess.run(cmd_parts, capture_output=True)
@@ -29,7 +29,7 @@ def test_15px_border():
     path_modified = Path("tests/source_images/bear_scratching_bordered.jpg")
     path_reference = Path("tests/reference_images/bear_scratching_15px_border.jpg")
 
-    cmd = f"python add_border.py {path_source} 15"
+    cmd = f"python py_image_border/add_border.py {path_source} 15"
     cmd_parts = cmd.split()
 
     subprocess.run(cmd_parts)
@@ -42,7 +42,7 @@ def test_padding_only():
     path_modified = Path("tests/source_images/bear_scratching_bordered.jpg")
     path_reference = Path("tests/reference_images/bear_scratching_15px_padding.jpg")
 
-    cmd = f"python add_border.py {path_source} --padding 15"
+    cmd = f"python py_image_border/add_border.py {path_source} --padding 15"
     cmd_parts = cmd.split()
 
     subprocess.run(cmd_parts)
@@ -55,7 +55,7 @@ def test_custom_color_only():
     path_modified = Path("tests/source_images/bear_scratching_bordered.jpg")
     path_reference = Path("tests/reference_images/bear_scratching_black_border.jpg")
 
-    cmd = f"python add_border.py {path_source} --border-color black"
+    cmd = f"python py_image_border/add_border.py {path_source} --border-color black"
     cmd_parts = cmd.split()
 
     subprocess.run(cmd_parts)
@@ -71,7 +71,7 @@ def test_padding_and_border():
     path_modified = Path("tests/source_images/bear_scratching_bordered.jpg")
     path_reference = Path("tests/reference_images/bear_scratching_20px_border_15px_padding.jpg")
 
-    cmd = f"python add_border.py {path_source} 20 --padding 15"
+    cmd = f"python py_image_border/add_border.py {path_source} 20 --padding 15"
     cmd_parts = cmd.split()
 
     subprocess.run(cmd_parts)
@@ -82,7 +82,7 @@ def test_padding_and_border():
 
 def test_no_arg():
     """Test that calling without a filename specified generates correct error msg."""
-    cmd = f"python add_border.py"
+    cmd = f"python py_image_border/add_border.py"
     cmd_parts = cmd.split()
 
     output = subprocess.run(cmd_parts, capture_output=True)
@@ -97,7 +97,7 @@ def test_nonexistent_file():
     """Test that calling with a nonexistent file generates a correct error msg."""
     path_source = Path("tests/source_images/nonexistent_file.txt")
 
-    cmd = f"python add_border.py {path_source}"
+    cmd = f"python py_image_border/add_border.py {path_source}"
     cmd_parts = cmd.split()
 
     output = subprocess.run(cmd_parts, capture_output=True)
@@ -109,7 +109,7 @@ def test_invalid_image_file():
     """Test that calling with an invalid image file generates correct error msg."""
     path_source = Path("tests/source_images/hello.txt")
 
-    cmd = f"python add_border.py {path_source}"
+    cmd = f"python py_image_border/add_border.py {path_source}"
     cmd_parts = cmd.split()
 
     output = subprocess.run(cmd_parts, capture_output=True)

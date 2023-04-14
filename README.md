@@ -64,6 +64,6 @@ This project was motivated by the lack of an easy, consistent way to add borders
 
 The test image is a bear I caught with a game camera, scratching its back against a tree:
 
-![Bear scratching its back against a tree](tests/reference_images/bear_scratching_default.jpg)
+![Bear scratching its back against a tree](https://github.com/ehmatthes/py-image-border/raw/main/tests/reference_images/bear_scratching_default.jpg)
 
 I had left the game camera out much longer than expected, and had about 100k images to go through. I wrote a Python script to flag any image with an area of dark pixels. This was one of about 12 images flagged. :)

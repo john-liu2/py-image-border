@@ -2,7 +2,7 @@
 
 from pathlib import Path
 from PIL import Image, ImageOps, UnidentifiedImageError
-from cli import Options
+from .cli import Options
 
 def add_border(path: Path, options: Options):
     """Add a border to an image.

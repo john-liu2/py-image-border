@@ -7,8 +7,8 @@ Saves a new version of the original image, with _bordered
   input_image.png -> input_image_bordered.png
 """
 
-from cli import parse_cli_args
-from image_processing import add_border
+from .cli import parse_cli_args
+from .image_processing import add_border
 
 def main():
     """Parse CLI options, modify the image, and display a confirmation

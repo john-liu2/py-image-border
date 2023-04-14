@@ -4,7 +4,13 @@
 `py-image-border` is a simple project that lets you easily add borders to screenshots:
 
 ```
-$ python -m add_border my_screenshot.png
+$ add-border my_screenshot.png
+```
+
+Installation sets up an `add-border` shortcut, so you don't need to use any `python` commands to use the project. If you want, you can also use the following syntax:
+
+```
+$ python -m py_image_border.add_border my_screenshot.png
 ```
 
 Installation
@@ -24,19 +30,19 @@ You can adjust the size of the border, add some padding between the image and bo
 
 ```
 # 15-pixel border:
-$ python -m add_border my_screenshot.png 15
+$ add-border my_screenshot.png 15
 
 # 10-pixel padding:
-$ python -m add_border my_screenshot.png --padding 10
+$ add-border my_screenshot.png --padding 10
 
 # black border:
-$ python -m add_border my_screenshot.png --border-color black
+$ add-border my_screenshot.png --border-color black
 ```
 
 To see the full usage documentation, use `--help`:
 
 ```
-usage: main.py [-h] [--padding PADDING] [--border-color BORDER_COLOR] path [border_width]
+usage: add-border [-h] [--padding PADDING] [--border-color BORDER_COLOR] path [border_width]
 
 Add a border to any image.
 

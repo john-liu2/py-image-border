@@ -88,7 +88,7 @@ def test_no_arg():
     output = subprocess.run(cmd_parts, capture_output=True)
     error_msg = output.stderr.decode()
 
-    assert "error: the following arguments are required: filename" in error_msg
+    assert "error: the following arguments are required: path" in error_msg
 
     # error_msg = output.stdout.decode()
     # assert "You must provide a target image." in error_msg

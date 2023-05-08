@@ -77,6 +77,19 @@ def test_padding_and_border():
     subprocess.run(cmd_parts)
     assert filecmp.cmp(path_modified, path_reference)
 
+def test_make_transparent():
+    """Test that making the background transparent works."""
+    # Note: currently, modified image ends up in same dir as source image.
+    path_source = Path("tests/source_images/gh_screenshot.png")
+    path_modified = Path("tests/source_images/gh_screenshot_bordered.png")
+    path_reference = Path("tests/reference_images/gh_screenshot_transparent.png")
+
+    cmd = f"python -m py_image_border.add_border {path_source} 0 --make-transparent"
+    cmd_parts = cmd.split()
+
+    subprocess.run(cmd_parts)
+    assert filecmp.cmp(path_modified, path_reference)
+
 
 # --- Tests for incorrect usage. ---
 

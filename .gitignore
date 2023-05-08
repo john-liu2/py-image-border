@@ -6,6 +6,7 @@ __pycache__/
 .venv/
 dist/
 
-tests/source_images/bear_scratching_bordered.jpg/
+tests/source_images/bear_scratching_bordered.jpg
+tests/source_images/gh_screenshot_bordered.png
 willie_hiking.jpg
 willie_hiking_bordered.jpg

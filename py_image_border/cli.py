@@ -62,6 +62,6 @@ def parse_cli_args():
         sys.exit()
 
     options = Options(args.border_width, args.padding,
-            args.border_color)
+            args.border_color, args.make_transparent)
 
     return path, options

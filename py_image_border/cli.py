@@ -50,7 +50,7 @@ def parse_cli_args():
             help="Border color (default: lightgray).")
     parser.add_argument("--make-transparent",
             dest="make_transparent", action="store_true",
-            help="Make the background transparent (default: False).")
+            help="[Experimental] Make the background transparent (default: False).")
 
     # Define options.
     args = parser.parse_args()

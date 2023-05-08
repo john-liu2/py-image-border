@@ -42,7 +42,7 @@ $ add-border my_screenshot.png --border-color black
 To see the full usage documentation, use `--help`:
 
 ```
-usage: add-border [-h] [--padding PADDING] [--border-color BORDER_COLOR] path [border_width]
+usage: add-border [-h] [--padding PADDING] [--border-color BORDER_COLOR] [--make-transparent] path [border_width]
 
 Add a border to any image.
 
@@ -55,6 +55,7 @@ options:
   --padding PADDING     Padding (default: 0).
   --border-color BORDER_COLOR
                         Border color (default: lightgray).
+  --make-transparent    [Experimental] Make the background transparent (default: False).
 ```
 
 Development

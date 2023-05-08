@@ -5,10 +5,9 @@ from PIL import Image, ImageOps, UnidentifiedImageError
 from .cli import Options
 
 
-def make_background_transparent(img):
+def make_background_transparent(img, threshold=10):
     img = img.convert("RGBA")
     bg_color = img.getpixel((0, 0))
-    threshold = 10
     transparent_color = (0, 0, 0, 0)
 
     for y in range(img.height):
@@ -42,8 +41,15 @@ def add_border(path: Path, options: Options):
     # Deal with transparency before adding any borders or padding,
     #   because transparency assumes the top left pixel
     #   is the background color.
+    # This doesn't work particularly well. Consider exposing threshold
+    #   as a CLI arg. Also consider looking at more complex ways of 
+    #   adding transparency. For example in the sample image I used, the
+    #   logo elements were shaded. This would probably work better on
+    #   an image where all colored elements had no shading, ie their
+    #   pixels were all one color.
+    # Would also reconsider exactly how the threshold is used for each pixel.
     if options.make_transparent:
-        new_img = make_background_transparent(new_img)
+        new_img = make_background_transparent(new_img, threshold=40)
 
     new_img = ImageOps.expand(new_img, border=options.padding, fill="white")
     new_img = ImageOps.expand(new_img, border=options.border_width,

@@ -19,6 +19,7 @@ class Options:
     border_width: int
     padding: int
     border_color: str
+    make_transparent: bool
 
 def parse_cli_args():
     """Parse all options from the CLI.
@@ -47,6 +48,9 @@ def parse_cli_args():
     parser.add_argument("--border-color",
             dest="border_color", default="lightgray",
             help="Border color (default: lightgray).")
+    parser.add_argument("--make-transparent",
+            dest="make_transparent", action="store_true",
+            help="Make the background transparent (default: False).")
 
     # Define options.
     args = parser.parse_args()

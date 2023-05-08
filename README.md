@@ -57,6 +57,37 @@ options:
                         Border color (default: lightgray).
 ```
 
+Development
+---
+
+To set up a development environment, clone this repository. Then make a separate environment for using the project.
+
+Set up a development environment, and run the tests:
+
+```sh
+$ git clone https://github.com/ehmatthes/py-image-border.git
+$ cd py-image-border
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+(.venv)$ pip install --upgrade pip
+(.venv)$ pip install -r requirements.txt
+(.venv)$ pytest
+```
+
+Install the project to a different environment, and run help:
+
+```sh
+$ mkdir use_pyimageborder
+$ cd use_pyimageborder
+use_pyimageborder$ python3 -m venv .venv
+use_pyimageborder$ source .venv/bin/activate
+use_pyimageborder(.venv)$ pip install --upgrade pip
+use_pyimageborder(.venv)$ pip install -e /local/path/to/py-image-border
+use_pyimageborder(.venv)$ add-border --help
+```
+
+For development work, make any changes you want in the `py-image-border/` directory. Run the project against a test image in the `use_pyimageborder/` directory. Run the test suite as usual in the `py-image-border/` directory.
+
 Notes
 ---
 

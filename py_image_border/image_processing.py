@@ -48,6 +48,8 @@ def add_border(path: Path, options: Options):
     #   an image where all colored elements had no shading, ie their
     #   pixels were all one color.
     # Would also reconsider exactly how the threshold is used for each pixel.
+    # See https://stackoverflow.com/questions/765736/how-to-use-pil-to-make-all-white-pixels-transparent
+    #   for efficiency notes.
     if options.make_transparent:
         new_img = make_background_transparent(new_img, threshold=40)
 

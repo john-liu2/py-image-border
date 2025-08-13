@@ -99,7 +99,7 @@ def test_make_transparent():
         img2 = Image.open(img2_path).convert("RGB")
         return ImageChops.difference(img1, img2).getbbox() is None
 
-    return images_are_equal(path_modified, path_reference)
+    assert images_are_equal(path_modified, path_reference)
 
 
 # --- Tests for incorrect usage. ---

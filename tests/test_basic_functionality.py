@@ -89,9 +89,8 @@ def test_make_transparent():
 
     subprocess.run(cmd_parts)
     # assert filecmp.cmp(path_modified, path_reference)
-    # JL 2025-08-12: Fix: the metadata or compression can make PNG files binary
-    # different even if they look the same. We should use Pillow library to do pixel
-    # equality comparison.
+    # JL 2025-08-12: The metadata or compression can make PNG files binary different
+    # even if they look the same. Fix: use Pillow library to compare pixel equality.
     from PIL import Image, ImageChops
 
     def images_are_equal(img1_path, img2_path):

@@ -20,6 +20,11 @@ dependencies = [
     "Pillow",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
 [project.urls]
 "Homepage" = "https://github.com/ehmatthes/py-image-border"
 "Issues" = "https://github.com/ehmatthes/py-image-border/issues"
